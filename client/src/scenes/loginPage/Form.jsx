@@ -67,7 +67,7 @@ const Form = () => {
   
 
    const savedUserResponse = await fetch(
-      "http://localhost:5000/auth/register",
+      "https://mern-socio.onrender.com/auth/register",
       {
         method: "POST",
         body: formData,
@@ -82,7 +82,7 @@ const Form = () => {
   }
 
   const login = async (values, onSubmitProps) => {
-    const loggedInResponse = await fetch("http://localhost:5000/auth/login", {
+    const loggedInResponse = await fetch("https://mern-socio.onrender.com/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(values),
@@ -237,11 +237,15 @@ const Form = () => {
 
           {/* BUTTONS */}
           <Box>
+            <span>
+              email:guest@gmail.com&nbsp;
+              &nbsp;password:guest
+            </span>
             <Button
               fullWidth
               type="submit"
               sx={{
-                m: "2rem 0",
+                m: "1rem 0",
                 p: "1rem",
                 backgroundColor: palette.primary.main,
                 color: palette.background.alt,
